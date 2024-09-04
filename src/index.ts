@@ -1,11 +1,9 @@
 import { fastify } from "fastify"
-import dotenv from "dotenv"
-
-dotenv.config()
+import bookRoutes from "./routes/index"
 
 const app = fastify()
 
-app.register()
+app.register(bookRoutes)
 
 app.listen({ port: Number(process.env.PORT) || 3000 }, (err, address) => {
   if (err) throw err

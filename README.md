@@ -6,4 +6,6 @@
 2. `npx ts-node src/index.ts`
     
 ## Using the API
-    To test the requests, its necessary to create a supabase project and table, the columns are the exact ones as the BookModel, id is uuid and the other ones is the same as the model
+    To test the requests, its necessary to create a supabase project and table,
+    the columns are the exact ones as the BookModel.
+    Id is uuid and the other ones is the same as the model

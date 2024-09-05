@@ -35,3 +35,16 @@ export async function updateBook(req: FastifyRequest, reply: FastifyReply) {
     return reply.status(500).send({ error: error.message })
   }
 }
+
+export async function deleteBook(req: FastifyRequest, reply: FastifyReply) {
+  try {
+    const { id } = req.params as { id: string }
+
+    const deletedBook = await BookService.deleteBook(id)
+
+    return reply.status(200).send(deletedBook)
+  } catch (error: any) {
+    console.error(error.message, error)
+    return reply.status(500).send({ error: error.message })
+  }
+}

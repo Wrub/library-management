@@ -23,11 +23,15 @@ export async function updateBook(id: string, updatedBook: Partial<Book>) {
     throw new Error(error.message)
   }
 
-  // TODO: Criar um retorno para o usuario além do status
-  if (data) {
-    const selectedBook: Book = data
-    console.log(`Book ${selectedBook.title} was updated successfully`)
+  return console.log(`Book ${updatedBook?.title} was updated successfully`)
+}
+
+export async function deleteBook(id: string) {
+  const { data, error } = await supabase.from("books").delete().eq("id", id).select()
+
+  if (error) {
+    throw new Error(error.message)
   }
 
-  return data as Book
+  return console.log(`Book ${id} was deleted successfully`)
 }

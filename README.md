@@ -1,5 +1,5 @@
 # Library Management CRUD
-    Simple CRUD made with MVC pattern, using [Fastify](https://fastify.dev/) and PostgreSQL with Supabase
+    Simple CRUD made with MVC pattern, using TypeScript, [Fastify](https://fastify.dev/) and PostgreSQL with Supabase
 
 ## Setup
 1. `npm install`

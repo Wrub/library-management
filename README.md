@@ -9,6 +9,16 @@ npm install
 npx ts-node src/index.ts
 ```
     
-## Using the API
-To test the requests, its necessary to create a supabase project and table, the columns are the exact ones as the BookModel.<br>
-Id is uuid type and the other ones are the same as the model.
+## API Descriptions
+
+### Book Model
+```typescript
+ Book {
+  id: number
+  title: string
+  author: string
+  ISBN: string
+  publishDt: Date
+  publisher: string
+}
+```
